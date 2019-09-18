@@ -1,19 +1,23 @@
-package DomaciKlasa;
+package fakultet;
 
 public class GlavniProgram {
 
 	public static void main(String[] args) {
-		Knjige k=new Knjige("Labud","Petar Petrovic","100str");
-		Knjige k1=new Knjige("Koza","Nemanja Nesic","150str");
-		Knjige k2=new Knjige ("Coban","Ivan Lazarevic","170str");
-		k.setGodina(1950);
-		k1.setGodina(1960);
-		k2.setGodina(1985);
-		System.out.println(k.getNaziv()+" "+k.getAutor()+" "+k.getStr()+" "+k.getGodina());
-		System.out.println(k1.getNaziv()+" "+k1.getAutor()+" "+k1.getStr()+" "+k1.getGodina());
-		System.out.println(k2.getNaziv()+" "+k2.getAutor()+" "+k2.getStr()+" "+k2.getGodina());
-
-	
+		Student s= new Student("Vuk","Nikolic",1996,4,8.5);
+		Student s1= new Student("Marko","Markovic",1998,2,7.5);
+		Student s2= new Student("Petar","Nikolic",1999,1,9.5);
+		Profesor p= new Profesor("Petar","Matic",1965,"profesor");
+		Profesor p1= new Profesor("Nenad", "Matic", 1965,"profesor");
+		p1.setIme("Nenad");
+		p1.setPrezime("Matic");
+		p.addPredmet("Mata");
+		p.addPredmet("Fizika");
+		p1.addPredmet("Likovno");
+		p1.addPredmet("Fizicko");
+		System.out.println(p1.isp());
+		
+		
+		
 	}
 
 }
